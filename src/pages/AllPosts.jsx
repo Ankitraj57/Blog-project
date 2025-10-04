@@ -67,7 +67,7 @@ function AllPosts() {
                 {posts.length > 0 ? (
                     <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
                         {posts.map((post) => {
-                            const { $id, title, featuredImage, content } = post;
+                            const { $id, title, featuredImage, content, userId } = post;
                             return (
                                 <div key={$id} className="h-full">
                                     <div key={$id} className="h-full">
@@ -76,7 +76,7 @@ function AllPosts() {
                                             title={title}
                                             featuredImage={featuredImage}
                                             content={content || ''}
-                                            userId={post.userId}
+                                            userId={userId}
                                         />
                                     </div>
                                 </div>

@@ -64,7 +64,7 @@ function PostForm({ post }) {
                     const dbPost = await appwriteService.createPost({
                         ...data,
                         featuredImage: file.$id,
-                        userId: userData.$id, // Changed from userid to userId to match schema
+                        userid: userData.$id, // Using userid to match the parameter name in createPost
                         status: data.status || 'active',
                     });
                     
